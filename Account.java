@@ -9,10 +9,10 @@ public class Account {
 	public Account() {
 	}
 
-	public Account(int number, String holder, double balance) {
+	public Account(int number, String holder, double initialDeposit) {
 		this.number = number;
 		this.holder = holder;
-		this.balance = balance;
+		depositValue(initialDeposit);
 	}
 
 	public Account(int number, String holder) {
@@ -36,12 +36,12 @@ public class Account {
 		return balance;
 	}
 	
-	public double depoistValue(double deposit) {
-		return balance += deposit;
+	public void depositValue(double deposit) {
+		balance += deposit;
 	}
 	
-	public double withdrawValue(double withdraw) {
-		return balance -= 5.00 + withdraw;
+	public void withdrawValue(double withdraw) {
+		balance -= 5.00 + withdraw;
 	}
 	
 	public String toString() {
